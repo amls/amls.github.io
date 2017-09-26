@@ -357,7 +357,7 @@ $contactForm.submit(function(e) {
 		},
 		success: function(data) {
 			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+			$contactForm.append('<div class="alert alert--success">Thank you for contacting us! You are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.</div>');
 		},
 		error: function(err) {
 			$contactForm.find('.alert--loading').hide();
