@@ -292,7 +292,8 @@
     <script>
           var message = "";
       
-      $("#sendMessage").on("click", function() {
+      $(".btn-success").on("click", function() {
+        alert("hi gumagana ung button ntin");
     message = $("#contactform").serialize();
     $.ajax({
         url: "//formspree.io/andric_shen95@yahoo.com", 
