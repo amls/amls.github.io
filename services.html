@@ -275,7 +275,23 @@
                 </div>
             </div>
         </div>
-          
+
+<!--    END OF MODAL ASK QUOTATION -->
+    </div>
+    
+      
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <script>
+          var message = "";
+      
       $("#sendMessage").on("click", function() {
     message = $("#contactform").serialize();
     $.ajax({
@@ -286,18 +302,8 @@
     });
     alert('Thanks for the email, we\'ll be in touch promptly.');
     return false;
-<!--    END OF MODAL ASK QUOTATION -->
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
+        
+      </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
