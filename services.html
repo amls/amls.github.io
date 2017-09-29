@@ -53,10 +53,6 @@
     <!-- Page Content -->
     <div class="container">
 
-<div class="alert alert-success" id="success-alert">
-    <button type="button" class="close" data-dismiss="alert">x</button>
-    <strong>Thank you for contacting us!</strong> We will contact you as soon as we review your message.
-</div>
       <div class="row">
 
         <div class="col-lg-3">
@@ -73,6 +69,10 @@
 
 
 
+<div class="alert alert-success" id="success-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Success! </strong>
+</div>
 
         <div class="col-lg-9">
 
@@ -264,6 +264,7 @@
 <!--    <input type="hidden" name="_subject" value="Subject">
              -->
                 <div class="modal-body" style="padding: 5px;">
+
                           <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
                                     <input class="form-control" name="Name" placeholder="Name" type="text" required autofocus />
@@ -285,6 +286,10 @@
                                     <textarea style="resize:vertical;" class="form-control" placeholder="Message..." rows="6" name="Message" required></textarea>
                                 </div>
                             </div>
+
+
+
+
                         </div>   
                     <input type="text" name="_gotcha" style="display:none" />
 
@@ -332,15 +337,15 @@ $contactForm.submit(function(e) {
             $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
         },
         success: function(data) {
+                   $('.form-control').val("");
+
             $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--success">Thank you for contacting us! You are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.</div>');
-            
+
+            $('.form-control').val("");
             $('#contact').modal('hide');
             $("#success-alert").fadeTo(8000, 500).slideUp(500, function(){
             $("#success-alert").slideUp(500);});   
-                     alert("hello");
-
-
 
         },
         error: function(err) {
