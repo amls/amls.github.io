@@ -335,16 +335,14 @@ $contactForm.submit(function(e) {
             $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--success">Thank you for contacting us! You are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.</div>');
             alert("hello");
-            $(document).ready (function(){
-            $("#success-alert").show();
             
-                $("#success-alert").fadeTo(500, 500).slideUp(500, function(){
-               $("#success-alert").slideUp(400);
-                           alert("fade na dapat");
+            $('#contact').modal('toggle');
+            $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+            $("#success-alert").slideUp(500);});   
+                        alert("bye");
 
-                });   
          
- });
+
 
         },
         error: function(err) {
