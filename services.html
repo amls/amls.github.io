@@ -334,11 +334,14 @@ $contactForm.submit(function(e) {
         success: function(data) {
             $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--success">Thank you for contacting us! You are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.</div>');
+            alert("hello");
             $(document).ready (function(){
             $("#success-alert").hide();
             
                 $("#success-alert").fadeTo(500, 500).slideUp(500, function(){
                $("#success-alert").slideUp(400);
+                           alert("fade na dapat");
+
                 });   
          
  });
