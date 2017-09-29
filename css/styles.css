@@ -18,10 +18,12 @@ body {
 }
 
 .btnAd {
-    right: 10px;
+   width: 100%;
+/*  right: 10px;
     position: absolute;
     display: block;
-    top: 225px;
-    width: 180px;
+    top: 225px; 
     height: 50px;
+*/
+   
 }
